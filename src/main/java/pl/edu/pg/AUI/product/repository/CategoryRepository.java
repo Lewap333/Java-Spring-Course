@@ -1,8 +1,8 @@
-package pl.edu.pg.AUI.repository;
+package pl.edu.pg.AUI.product.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import pl.edu.pg.AUI.catalog.Category;
+import pl.edu.pg.AUI.product.entity.Category;
 
 import java.util.UUID;
 

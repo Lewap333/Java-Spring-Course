@@ -1,11 +1,11 @@
-package pl.edu.pg.AUI.service;
+package pl.edu.pg.AUI.product.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.edu.pg.AUI.catalog.Category;
-import pl.edu.pg.AUI.catalog.Product;
-import pl.edu.pg.AUI.repository.CategoryRepository;
-import pl.edu.pg.AUI.repository.ProductRepository;
+import pl.edu.pg.AUI.product.entity.Category;
+import pl.edu.pg.AUI.product.entity.Product;
+import pl.edu.pg.AUI.product.repository.CategoryRepository;
+import pl.edu.pg.AUI.product.repository.ProductRepository;
 
 import java.util.List;
 import java.util.UUID;

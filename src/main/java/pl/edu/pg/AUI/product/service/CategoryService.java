@@ -1,9 +1,9 @@
-package pl.edu.pg.AUI.service;
+package pl.edu.pg.AUI.product.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.edu.pg.AUI.catalog.Category;
-import pl.edu.pg.AUI.repository.CategoryRepository;
+import pl.edu.pg.AUI.product.entity.Category;
+import pl.edu.pg.AUI.product.repository.CategoryRepository;
 
 import java.util.List;
 import java.util.UUID;

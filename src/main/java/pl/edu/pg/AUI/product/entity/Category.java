@@ -1,4 +1,4 @@
-package pl.edu.pg.AUI.catalog;
+package pl.edu.pg.AUI.product.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

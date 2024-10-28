@@ -3,10 +3,10 @@ package pl.edu.pg.AUI.initialize;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import pl.edu.pg.AUI.catalog.Category;
-import pl.edu.pg.AUI.catalog.Product;
-import pl.edu.pg.AUI.service.CategoryService;
-import pl.edu.pg.AUI.service.ProductService;
+import pl.edu.pg.AUI.product.entity.Category;
+import pl.edu.pg.AUI.product.entity.Product;
+import pl.edu.pg.AUI.product.service.CategoryService;
+import pl.edu.pg.AUI.product.service.ProductService;
 
 import java.util.ArrayList;
 import java.util.UUID;

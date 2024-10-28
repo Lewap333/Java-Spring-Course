@@ -1,10 +1,10 @@
-package pl.edu.pg.AUI.repository;
+package pl.edu.pg.AUI.product.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import pl.edu.pg.AUI.catalog.Category;
-import pl.edu.pg.AUI.catalog.Product;
+import pl.edu.pg.AUI.product.entity.Category;
+import pl.edu.pg.AUI.product.entity.Product;
 
 import java.util.List;
 import java.util.UUID;
