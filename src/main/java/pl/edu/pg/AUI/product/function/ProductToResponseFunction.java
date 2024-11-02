@@ -11,7 +11,7 @@ import java.util.function.Function;
  * Function interface used to convert Product to GetProductResponse
  */
 @Component
-public class ProductToResponse implements Function<Product, GetProductResponse> {
+public class ProductToResponseFunction implements Function<Product, GetProductResponse> {
     @Override
     public GetProductResponse apply(Product entity){
         return GetProductResponse.builder()

@@ -23,7 +23,7 @@ public class Category implements Serializable, Comparable<Category> {
     @Column(name ="category_name")
     String name;
     @Column(name ="discount")
-    int discount;
+    Integer discount;
     @ToString.Exclude
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     List<Product> productList;

@@ -7,6 +7,8 @@ import java.util.UUID;
 
 /**
  * GetProductsResponse contains list of available products with their id's and names.
+ * For info on how Product class is defined:
+ *      pl.edu.pg.AUI.product.entity.Product
  */
 @Getter
 @Setter

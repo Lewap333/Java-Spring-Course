@@ -6,8 +6,8 @@ import java.util.UUID;
 
 /**
  * GetCategoryResponse includes details about selected category.
-    For info on how Category class is defined:
-    pl.edu.pg.AUI.product.entity.Category
+ * For info on how Category class is defined:
+ *      pl.edu.pg.AUI.product.entity.Category
  */
 @Getter
 @Setter
@@ -28,7 +28,7 @@ public class GetCategoryResponse {
     private String name;
 
     /**
-     * Discount for this category.
+     * Discount for the category.
      */
-    private String discount;
+    private Integer discount;
 }

@@ -5,9 +5,9 @@ import lombok.*;
 import java.util.UUID;
 
 /**
-    GetProductResponse contains all fields that can be presented to the user (not all of them can be changed).
-    For info on how Product class is defined:
-    pl.edu.pg.AUI.product.entity.Product
+ * GetProductResponse contains all fields that can be presented to the user (not all of them can be changed).
+ * For info on how Product class is defined:
+ *      pl.edu.pg.AUI.product.entity.Product
  */
 @Getter
 @Setter

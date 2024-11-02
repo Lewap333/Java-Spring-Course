@@ -4,29 +4,57 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.edu.pg.AUI.product.entity.Category;
 import pl.edu.pg.AUI.product.repository.api.CategoryRepository;
+import pl.edu.pg.AUI.product.service.api.CategoryService;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class CategoryService implements CategoryService {
-
+public class CategoryDefaultService implements CategoryService {
+    /**
+     * Repository for category
+     */
     private final CategoryRepository categoryRepository;
 
     @Autowired
-    public CategoryService(CategoryRepository repository) {
+    public CategoryDefaultService(CategoryRepository repository) {
         this.categoryRepository = repository;
     }
-    public List<Category> findAllCategories() {
+
+    /**
+     * @param id category id
+     * @return Optional container with category
+     */
+    @Override
+    public Optional<Category> find(UUID id){
+        return categoryRepository.findById(id);
+    }
+
+    /**
+     * Create new category
+     * @param category new category
+     */
+    @Override
+    public void create(Category category){
+        categoryRepository.save(category);
+    }
+
+    /**
+     * @return All categories list
+     */
+    @Override
+    public List<Category> findAll(){
         return categoryRepository.findAll();
     }
-    public Category findCategoryById(UUID id) {
-        return categoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Category not found"));
-    }
-    public Category saveCategory(Category category) {
-        return categoryRepository.save(category);
-    }
-    public void deleteCategory(UUID id) {
+
+    /**
+     * Delete category of given id
+     * @param id category id
+     */
+    @Override
+    public void delete(UUID id){
         categoryRepository.deleteById(id);
     }
+
 }

@@ -22,7 +22,7 @@ public class Product implements Serializable, Comparable<Product> {
     @Column(name ="product_name")
     String name;
     @Column(name ="price")
-    int price;
+    Integer price;
     @EqualsAndHashCode.Exclude
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")

@@ -1,4 +1,4 @@
-package pl.edu.pg.AUI.product.repository;
+package pl.edu.pg.AUI.product.repository.api;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ProductRepository extends JpaRepository<Product, UUID> {
+
+
 
     // Repository for elements should allow for
     // querying them by category
