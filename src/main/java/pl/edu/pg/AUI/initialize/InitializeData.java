@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pl.edu.pg.AUI.product.entity.Category;
 import pl.edu.pg.AUI.product.entity.Product;
-import pl.edu.pg.AUI.product.service.CategoryService;
-import pl.edu.pg.AUI.product.service.ProductService;
+import pl.edu.pg.AUI.product.service.impl.CategoryDefaultService;
+import pl.edu.pg.AUI.product.service.impl.ProductDefaultService;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -14,13 +14,13 @@ import java.util.UUID;
 @Component
 public class InitializeData implements InitializingBean {
 
-    private final CategoryService categoryService;
-    private final ProductService productService;
+    private final CategoryDefaultService categoryDefaultService;
+    private final ProductDefaultService productDefaultService;
 
     @Autowired
-    public InitializeData(CategoryService categoryService, ProductService productService) {
-        this.categoryService = categoryService;
-        this.productService = productService;
+    public InitializeData(CategoryDefaultService categoryDefaultService, ProductDefaultService productDefaultService) {
+        this.categoryDefaultService = categoryDefaultService;
+        this.productDefaultService = productDefaultService;
     }
 
     @Override
@@ -69,8 +69,8 @@ public class InitializeData implements InitializingBean {
         computers.getProductList().add(appleMacBookAir);
 
         // Save categories (cascade saves products)
-        categoryService.saveCategory(mobileDevices);
-        categoryService.saveCategory(computers);
+        categoryDefaultService.create(mobileDevices);
+        categoryDefaultService.create(computers);
 
         System.out.println("Initialize data complete.");
     }
