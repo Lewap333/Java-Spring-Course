@@ -8,8 +8,11 @@ import org.springframework.web.server.ResponseStatusException;
 import pl.edu.pg.AUI.product.controller.api.CategoryController;
 import pl.edu.pg.AUI.product.dto.GetCategoriesResponse;
 import pl.edu.pg.AUI.product.dto.GetCategoryResponse;
+import pl.edu.pg.AUI.product.dto.PutCategoryRequest;
+import pl.edu.pg.AUI.product.dto.PutProductRequest;
 import pl.edu.pg.AUI.product.function.CategoriesToResponseFunction;
 import pl.edu.pg.AUI.product.function.CategoryToResponseFunction;
+import pl.edu.pg.AUI.product.function.RequestToCategoryFunction;
 import pl.edu.pg.AUI.product.service.impl.CategoryDefaultService;
 
 import java.util.UUID;
@@ -30,15 +33,23 @@ public class  CategoryDefaultController implements CategoryController {
      */
     private final CategoriesToResponseFunction categoriesToResponse;
 
+    /**
+     * Convert request to category class
+     */
+    private final RequestToCategoryFunction requestToCategory;
+
     @Autowired
     public CategoryDefaultController(
             CategoryDefaultService service,
             CategoryToResponseFunction categoryToResponse,
-            CategoriesToResponseFunction categoriesToResponse) {
+            CategoriesToResponseFunction categoriesToResponse,
+            RequestToCategoryFunction requestToCategory) {
         this.service = service;
         this.categoryToResponse = categoryToResponse;
         this.categoriesToResponse = categoriesToResponse;
+        this.requestToCategory = requestToCategory;
     }
+
     @Override
     public GetCategoryResponse getCategory(UUID id){
         return service.find(id)
@@ -60,4 +71,8 @@ public class  CategoryDefaultController implements CategoryController {
         );
     }
 
+    @Override
+    public void putCategory(UUID id, PutCategoryRequest request) {
+        service.create(requestToCategory.apply(id, request));
+    }
 }

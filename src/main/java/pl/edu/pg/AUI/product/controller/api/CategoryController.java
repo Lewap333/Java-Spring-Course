@@ -4,6 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.pg.AUI.product.dto.GetCategoriesResponse;
 import pl.edu.pg.AUI.product.dto.GetCategoryResponse;
+import pl.edu.pg.AUI.product.dto.PutCategoryRequest;
+import pl.edu.pg.AUI.product.dto.PutProductRequest;
 
 import java.util.UUID;
 
@@ -32,4 +34,14 @@ public interface CategoryController {
             @PathVariable("id")
             UUID id
     );
+
+    @PutMapping("api/categories/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    void putCategory(
+            @PathVariable("id")
+            UUID uuid,
+            @RequestBody
+            PutCategoryRequest request
+    );
+
 }

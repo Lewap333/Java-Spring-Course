@@ -30,6 +30,15 @@ Content-Type: application/json
   "category": "0b38eb32-3cb3-458a-adc4-eb4dbed679d0"
 }
 
+### PUT new category
+PUT http://localhost:8080/api/categories/991901b8-61dd-4b66-b782-2b2275991333
+Content-Type: application/json
+
+{
+  "name" : "TVs",
+  "discount": 5
+}
+
 ### DELETE single product
 DELETE http://localhost:8080/api/products/771901b8-61dd-4b66-b782-2b2275991333
 
