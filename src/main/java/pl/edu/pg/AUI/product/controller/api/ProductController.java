@@ -34,7 +34,7 @@ public interface ProductController {
      * @param categoryId Selected category id
      * @return List of products from a category
      */
-    @GetMapping("api/categories/{categoryId}/products/")
+    @GetMapping("api/categories/{categoryId}/products")
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     GetProductsResponse getCategoryProducts(
@@ -57,7 +57,7 @@ public interface ProductController {
 
     /**
      * Delete product of given id
-     * @param uuid
+     * @param uuid product's id
      */
     @DeleteMapping("api/products/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

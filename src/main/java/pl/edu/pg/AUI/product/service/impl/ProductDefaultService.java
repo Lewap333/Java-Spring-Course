@@ -58,4 +58,9 @@ public class ProductDefaultService implements ProductService {
         return categoryRepository.findById(categoryId)
                 .map(productRepository::findByCategory);
     }
+
+    @Override
+    public List<Product> findAllWithCategory() {
+        return productRepository.findAllWithCategory();
+    }
 }

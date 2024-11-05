@@ -30,5 +30,4 @@ public class PutProductRequest {
      * ID of the product's category
      */
     private UUID category;
-
 }

@@ -44,4 +44,6 @@ public interface ProductService {
      * @return list of products of selected category
      */
     Optional<List<Product>> findAllByCategory(UUID categoryId);
+
+    public List<Product> findAllWithCategory();
 }
