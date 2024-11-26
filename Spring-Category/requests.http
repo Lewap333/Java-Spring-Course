@@ -1,0 +1,21 @@
+
+### GET all categories
+GET http://localhost:8082/api/categories
+
+### GET single category (Moblie Devices)
+GET http://localhost:8082/api/categories/0b38eb32-3cb3-458a-adc4-eb4dbed679d0
+
+### GET single category that doesn't exist
+GET http://localhost:8082/api/categories/0b38eb32-3cb3-458a-adc4-eb4dbed679d1
+
+### PUT new category
+PUT http://localhost:8082/api/categories/991901b8-61dd-4b66-b782-2b2275991333
+Content-Type: application/json
+
+{
+  "name" : "TVs",
+  "discount": 5
+}
+
+### DELETE category (Computers & Laptops)
+DELETE http://localhost:8082/api/categories/833716b6-7c43-4af9-81c2-988857039853

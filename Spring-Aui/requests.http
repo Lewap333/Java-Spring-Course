@@ -1,0 +1,51 @@
+
+### GET all categories
+GET http://localhost:8080/api/categories
+
+### GET all products
+GET http://localhost:8080/api/products
+
+### GET single category
+GET http://localhost:8080/api/categories/0b38eb32-3cb3-458a-adc4-eb4dbed679d0
+
+### GET single category that doesn't exist
+GET http://localhost:8080/api/categories/0b38eb32-3cb3-458a-adc4-eb4dbed679d1
+
+### GET single product
+GET http://localhost:8080/api/products/771901b8-61dd-4b66-b782-2b227599129c
+
+### GET single product that doesn't exist
+GET http://localhost:8080/api/products/771901b8-61dd-4b66-b782-2b227599129d
+
+### GET products from selected category
+GET http://localhost:8080/api/categories/833716b6-7c43-4af9-81c2-988857039853/products
+
+### PUT new product (into Moblie Devices category)
+PUT http://localhost:8080/api/products/771901b8-61dd-4b66-b782-2b2275991333
+Content-Type: application/json
+
+{
+  "name": "Huawei p30 pro",
+  "price": 2499,
+  "category": "0b38eb32-3cb3-458a-adc4-eb4dbed679d0"
+}
+
+### PUT new category
+PUT http://localhost:8080/api/categories/991901b8-61dd-4b66-b782-2b2275991333
+Content-Type: application/json
+
+{
+  "name" : "TVs",
+  "discount": 5
+}
+
+### DELETE single product
+DELETE http://localhost:8080/api/products/771901b8-61dd-4b66-b782-2b2275991333
+
+### DELETE category and it's products
+DELETE http://localhost:8080/api/categories/833716b6-7c43-4af9-81c2-988857039853
+
+
+
+
+

@@ -1,0 +1,48 @@
+### GET all products
+GET http://localhost:8081/api/products
+
+### GET single product (Apple MacBook Air)
+GET http://localhost:8081/api/products/771901b8-61dd-4b66-b782-2b227599129c
+
+### GET single product that doesn't exist
+GET http://localhost:8081/api/products/771901b8-61dd-4b66-b782-2b227599129d
+
+### GET products from selected category (Computers and Laptops)
+GET http://localhost:8081/api/categories/833716b6-7c43-4af9-81c2-988857039853/products
+
+### GET products from selected category that doesn't exist
+GET http://localhost:8081/api/categories/833716b6-7c43-4af9-81c2-988857039999/products
+
+### PUT new product (into Moblie Devices category)
+PUT http://localhost:8081/api/products/771901b8-61dd-4b66-b782-2b2275991333
+Content-Type: application/json
+
+{
+  "name": "Huawei p30 pro",
+  "price": 2499,
+  "category": "0b38eb32-3cb3-458a-adc4-eb4dbed679d0"
+}
+
+### PUT new product (into TVs category) (NEED TO CREATE THIS CATEGORY FIRST!)
+PUT http://localhost:8081/api/products/771901b8-61dd-4b66-b782-2b2275991377
+Content-Type: application/json
+
+{
+  "name": "Samsung QLED",
+  "price": 3999,
+  "category": "991901b8-61dd-4b66-b782-2b2275991333"
+}
+
+### GET single product (Samsung QLED) (NEW PRODUCT NEED TO CREATE FISRT!)
+GET http://localhost:8081/api/products/771901b8-61dd-4b66-b782-2b2275991377
+
+### DELETE single product
+DELETE http://localhost:8081/api/products/771901b8-61dd-4b66-b782-2b2275991333
+
+### DELETE category (Mobile Devices) and it's products
+DELETE http://localhost:8081/api/categories/0b38eb32-3cb3-458a-adc4-eb4dbed679d0
+
+
+
+
+
