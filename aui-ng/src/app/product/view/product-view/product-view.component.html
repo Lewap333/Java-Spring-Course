@@ -1,0 +1,29 @@
+<article *ngIf="product">
+  <header><h2>{{product.name}}</h2></header>
+  <table class="product-details">
+    <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Product's id:</td>
+      <td>{{product.id}}</td>
+    </tr>
+    <tr>
+      <td>Product's price:</td>
+      <td>{{product.price}}</td>
+    </tr>
+    <tr>
+      <td>Product's category:</td>
+      <td>{{product.category.name}}</td>
+    </tr>
+    <tr>
+      <td>Category id:</td>
+      <td>{{product.category.id}}</td>
+    </tr>
+    </tbody>
+  </table>
+</article>

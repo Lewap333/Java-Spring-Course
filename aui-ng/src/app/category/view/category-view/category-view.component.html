@@ -1,0 +1,47 @@
+<article *ngIf="category">
+  <header><h2>{{category.name}}</h2></header>
+  <table class="category-details">
+    <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Category id:</td>
+      <td>{{category.id}}</td>
+    </tr>
+    <tr>
+      <td>Category discount:</td>
+      <td>{{category.discount}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <header *ngIf="products"><h2>{{category.name}} products</h2></header>
+  <table *ngIf="products">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products.products">
+      <td>{{product.name}}</td>
+      <td>
+        <a [routerLink]="['/products', product.id]">View</a>
+      </td>
+      <td>
+        <a [routerLink]="['/products', product.id, 'edit']">Edit</a>
+      </td>
+      <td>
+        <button (click)="onDelete(product)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</article>
