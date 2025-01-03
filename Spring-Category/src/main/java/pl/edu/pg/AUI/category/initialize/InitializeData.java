@@ -33,7 +33,7 @@ public class InitializeData implements InitializingBean {
                 .discount(5)
                 .build();
 
-        categoryDefaultService.create(mobileDevices);
-        categoryDefaultService.create(computers);
+        categoryDefaultService.localCreate(mobileDevices);
+        categoryDefaultService.localCreate(computers);
     }
 }

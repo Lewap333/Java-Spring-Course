@@ -7,10 +7,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-product-edit',
-  standalone: false,
-
   templateUrl: './product-edit.component.html',
-  styleUrl: './product-edit.component.css'
+  styleUrls: ['./product-edit.component.css']
 })
 export class ProductEditComponent implements OnInit{
 

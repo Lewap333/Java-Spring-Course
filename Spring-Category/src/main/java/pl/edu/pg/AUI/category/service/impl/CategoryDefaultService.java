@@ -67,4 +67,8 @@ public class CategoryDefaultService implements CategoryService {
         eventRepository.delete(id);
     }
 
+    @Override
+    public void localCreate(Category category){
+        categoryRepository.save(category);
+    }
 }

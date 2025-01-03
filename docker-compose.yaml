@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  aui-product:
+    image: aui-product
+    restart: always
+
+  aui-category:
+    image: aui-category
+    restart: always
+    environment:
+      AUI_PRODUCT_URL: "http://aui-product:8080"
+
+  aui-gateway:
+    image: aui-gateway
+    restart: always
+    environment:
+      AUI_PRODUCT_URL: "http://aui-product:8080"
+      AUI_CATEGORY_URL: "http://aui-category:8080"
+      AUI_GATEWAY_HOST: "aui-gateway:8080"
+  
+  aui-ng:
+    image: aui-ng
+    restart: always
+    environment:
+      API_URL: http://aui-gateway:8080/api
+    ports:
+      - "8087:80"
+
+  
+
+
+  
+
+  

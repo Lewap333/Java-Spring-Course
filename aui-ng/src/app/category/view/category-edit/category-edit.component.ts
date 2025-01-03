@@ -8,10 +8,8 @@ import {CategoryForm} from '../../model/category-form';
 
 @Component({
   selector: 'app-category-edit',
-  standalone: false,
-
   templateUrl: './category-edit.component.html',
-  styleUrl: './category-edit.component.css'
+  styleUrls: ['./category-edit.component.css']
 })
 export class CategoryEditComponent {
 

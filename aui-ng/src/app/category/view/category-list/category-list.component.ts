@@ -6,10 +6,8 @@ import {Product} from '../../../product/model/product';
 
 @Component({
   selector: 'app-category-list',
-  standalone: false,
-
   templateUrl: './category-list.component.html',
-  styleUrl: './category-list.component.css'
+  styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent implements OnInit {
 

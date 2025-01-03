@@ -31,4 +31,9 @@ public interface CategoryService {
      */
     void delete(UUID id);
 
+    /**
+     * Create without sending message to product
+     * @param category new category
+     */
+    void localCreate(Category category);
 }

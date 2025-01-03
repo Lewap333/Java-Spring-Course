@@ -5,10 +5,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-product-view',
-  standalone: false,
-
   templateUrl: './product-view.component.html',
-  styleUrl: './product-view.component.css'
+  styleUrls: ['./product-view.component.css']
 })
 export class ProductViewComponent implements OnInit {
   /**

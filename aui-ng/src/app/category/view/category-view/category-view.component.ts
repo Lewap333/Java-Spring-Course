@@ -8,10 +8,8 @@ import {Product} from '../../../product/model/product';
 
 @Component({
   selector: 'app-category-view',
-  standalone: false,
-
   templateUrl: './category-view.component.html',
-  styleUrl: './category-view.component.css'
+  styleUrls: ['./category-view.component.css']
 })
 export class CategoryViewComponent {
 
